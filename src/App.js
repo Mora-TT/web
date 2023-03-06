@@ -13,6 +13,8 @@ function App() {
     <div>
       
       <ChakraProvider>
+        <WithSubnavigation />
+      
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Main />} />
