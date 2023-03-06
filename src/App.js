@@ -19,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/form" element={<Forms />} />
+            <Route path="/guidelines" element={<Guidelines />} />
           </Routes>
         </BrowserRouter>
       </ChakraProvider>
