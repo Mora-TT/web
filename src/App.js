@@ -13,6 +13,11 @@ function App() {
     <div>
       
       <ChakraProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Main />} />
+          </Routes>
+        </BrowserRouter>
       </ChakraProvider>
 
     </div>
