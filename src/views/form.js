@@ -41,11 +41,11 @@ function Forms() {
   return (
     <div>
 
-      <Box borderRadius='md' bg='tomato' px={30} h={8} paddingTop={5}>
+      <Box borderRadius='md' bg='tomato' px={5} h={8} paddingTop={5}>
 
         <p >*** Read the <Link color='teal.500' href='/guidelines'>guidelines</Link> carefully before submitting the form.</p>
         
-        <Heading as='h1' size='xl' paddingBottom={5} paddingTop={10} noOfLines={1} >
+        <Heading as='h1' size='0.5xl' paddingBottom={5} paddingTop={10} noOfLines={1} >
           Registration Form
         </Heading>
 
