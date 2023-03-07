@@ -12,19 +12,32 @@ import { useState } from "react";
 import { Input, Heading } from '@chakra-ui/react'
 import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
 import WithSubnavigation from '../components/Navbar';
+import SubmitButton from './Agreement';
 
 function Forms() {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState('');
+
+  const [accepted, setAccepted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e) => setInput(e.target.value)
-
-  const isError = input === ''
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log('name', event.target.name.value)
-    console.log('tournamentName', event.target.tournamentName.value)
-    localStorage.setItem('name', event.target.name.value);
+  function handleAcceptance() {
+    setAccepted(true);
   }
+  function handleSubmit() {
+    if (accepted) {
+      setSubmitted(true);
+    } else {
+      alert("Please accept the terms and conditions.");
+    }
+  }
+  const isError = input === ''
+  // const handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   console.log('name', event.target.name.value)
+  //   console.log('tournamentName', event.target.tournamentName.value)
+  //   localStorage.setItem('name', event.target.name.value);
+  // }
   return (
     <div>
 
