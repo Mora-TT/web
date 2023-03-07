@@ -21,7 +21,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  
+  import Pdf from '../documents/EF2023.pdf';
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
   
@@ -265,8 +265,8 @@ import {
         },
         {
           label: 'On Paper',
-          subLabel: 'Submit your registration form on paper',
-          href: '#',
+          subLabel: 'Download the registration form here ',
+          href: Pdf,
         },
       ],
     },

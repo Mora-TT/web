@@ -28,7 +28,7 @@ function Forms() {
     if (accepted) {
       setSubmitted(true);
     } else {
-      alert("Please accept the terms and conditions.");
+      alert("I agree to the guidelines");
     }
   }
   const isError = input === ''
