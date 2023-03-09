@@ -3,8 +3,13 @@ import { Box } from '@mui/system';
 import { Image, Heading, Center,View} from '@chakra-ui/react';
 import WithSubnavigation from '../components/Navbar';
 import './App.css';
+import { NavLink } from 'react-bootstrap';
 
 function Guidelines() {
+  const gmail =<a href="mailto:morattsmashes@gmail.com" style={{color: 'blue', textDecoration: 'underline'}}>morattsmashes@gmail.com</a>
+  const uomMail = <a href="mailto:dpe@uom.lk" style={{color: 'blue', textDecoration: 'underline'}}>dpe@uom.lk</a>
+  const bCapMobile=<a href="tel:+94763241609">+94763241609</a>
+  const gCapMobile=<a href="tel:+94766510422">+94766510422</a>
   const guidelines = [
     {description: 'All matches will be played as far as possible in accordance with the laws of the International Table Tennis federation.', key: 0},
     {description: '	The championship will be run on a knockout basis.', key: 1},
@@ -16,7 +21,7 @@ function Guidelines() {
     {description: 	'The draw and program will be displayed on the notice board at the venue, and it will serve as the only official information of the Championship.', key: 7},
     {description: 	'Entries close on 10th April 2023 at 3.00p.m. and the draw will be held on 21st April 2023 at 06.00pm, at University of Moratuwa.', key: 8},
     {description: 'ENTRY FEES: Rs. 500/= for the Intermediate & Novices events & Rs.400/= for Age Group event/s. Rs. 100/= will be charge as competition fees from each player. ', key: 9},
-    {description: 'Entries without the entry fee/s will not be included in the draw. Entries may be forwarded to reach by 03.00p.m. on 10th April 2023 to Mr. Supuna Warusawithana ,C/o Department of Physical Education,University of Moratuwa. Or by email as a PDF document to morattsmashes@gmail.com/dpe@uom.lk', key: 10},
+    {description: <>Entries without the entry fee/s will not be included in the draw. Entries may be forwarded to reach by 03.00p.m. on 10th April 2023 to Mr. Supuna Warusawithana ,C/o Department of Physical Education,University of Moratuwa. Or by email as a PDF document to {gmail}/ {uomMail}</>, key: 10},
     {description: 'Competitors should report to the tournament office 10 minutes before the scheduled time for each Match.', key: 11},  
     {description:   'An individual player cannot participate in more than two age group single events.', key: 12},  
     {description: 'The Tournament committee’s decision in all matters connected with the championship and any other matters not expressly provided herein shall be final and binding.', key: 13},  
@@ -32,7 +37,8 @@ function Guidelines() {
     {description: 'Any finalist / Semifinalist / Quarter finalist of any all island ranking open tournament (Men’s & Women’s Singles Event)', key: 3},
     {description: 'Previous all island novices Men’s & Women’s finalist (Both Singles and Doubles Events)', key: 4},
     {description: 'Previous all island Intermediate Men’s & Women’s finalist (Both Singles and Doubles Events)', key: 5},
-    {description: 'Members representing teams at the all-island schools Under 19, 18, 16, & 14 “A” division finals and 1st,2nd,3rd, places of the National Schools Games and All Island Schools Games. However, finalists of the Under 10 & 12 “A” division players can play as follows.', key: 6},
+    {description: 'Members representing teams at the all-island schools Under 19, 18, 16, & 14 “A” division finals and 1st,2nd,3rd, places of the National Schools Games and All Island Schools Games. However, finalists of the Under 10 & 12', key: 6},
+    {description: '“A” division players can play as follows.', key: 7},
   ];
   const data = [
     { cc: "UNDER 10", cp: "UNDER 09", ep: "UNDER 11, 13, and 15 NOVICES" },
@@ -88,8 +94,8 @@ function Guidelines() {
       <div className="text">
 
       Please Contact : <br/>
-      Mr. Supuna Warusawithana  +94 76 3241 609<br/>
-      Miss. Divya Karunasena  +94 76 6510 422
+      <b>Mr. Supuna Warusawithana</b> <>{bCapMobile}</><br/>
+      <b>Miss. Divya Karunasena</b>  <>{gCapMobile}</>
 
       </div>
 
