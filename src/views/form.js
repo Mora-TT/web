@@ -38,6 +38,13 @@ function Forms() {
   //   console.log('tournamentName', event.target.tournamentName.value)
   //   localStorage.setItem('name', event.target.name.value);
   // }
+  // const fileUploadInput = document.querySelector('.file-upload-input');
+  // fileUploadInput.addEventListener('change', (event) => {
+  //   const file = event.target.files[0];
+  //   console.log(file);
+  //   // You can perform any operation on the uploaded file here
+  // });
+
   return (
     <div>
 
@@ -99,6 +106,11 @@ function Forms() {
         <FormControl isRequired paddingBottom={5}>
           <FormLabel>TTASL Registration Number</FormLabel>
           <Input type="text" id="ttasl-reg-no" name="ttasl-reg-no" />
+        </FormControl>
+
+        <FormControl isRequired paddingBottom={5} >
+          <FormLabel>Payment Slip</FormLabel>
+          <input id="file-upload" type="file" name="file-upload-input" />
         </FormControl>
 
         <Heading as='h4' size='1xl' paddingBottom={5} paddingTop={5} noOfLines={1} >
