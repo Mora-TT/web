@@ -28,14 +28,14 @@ import {
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('gray.350', 'gray.800')}
+          bg={useColorModeValue('#B3E5BE', '#B3E5BE')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'80px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('transparent', 'gray.900')}
+          borderColor={useColorModeValue('transparent', '#B3E5BE')}
           align={'center'}>
           <Flex
             flex={{ base: 1, md: 'auto' }}
@@ -102,7 +102,7 @@ import {
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.500', 'gray.200');
     const linkHoverColor = useColorModeValue('black', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const popoverContentBgColor = useColorModeValue('#B3E5BE', '#B3E5BE');
   
     return (
       <Stack direction={'row'} spacing={4}>
