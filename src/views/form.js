@@ -71,7 +71,7 @@ function Forms() {
   const [eventsList, setEventList] = useState([]);
 
   function ChangeCount(count) {
-    console.log(count);
+    // console.log(count);
     // console.log(eventsList);
     if ((count.checked) && (eventsList.includes(count.name) == false)) {
       eventsList.push(count.name);
@@ -79,10 +79,9 @@ function Forms() {
       let newCount = eventsList.length * 100;
       setTotalCount(newCount);
       console.log(newCount);
-    } else if((eventsList.includes(count.name) == true)) {
+    } else if((!count.checked) && (eventsList.includes(count.name) == true)) {
       eventsList.splice(eventsList.indexOf(count.name))
-      let newCount = eventsList.length * 100;
-      setTotalCount(newCount);
+      setTotalCount(eventsList.length);
       setEventList(eventsList)
     }
     useEffect(() => {
@@ -134,7 +133,7 @@ function Forms() {
       <div >
       {options.map(o => (
         <FormControl paddingBottom={5} key={o.value} name={o.value} >
-          <Checkbox  key={o.value} id = {o.value} name={o.value} > {o.label} </Checkbox>         
+          <Checkbox  key={o.value} id = {o.value} name={o.value} onChange={e => ChangeCount(e.target)}>{o.label} </Checkbox>         
           {/* <input type="checkbox" key={o.value} id = {o.value} name={o.value} onChange={e => ChangeCount(e.target)} /> */}
         </FormControl>
       ))}
