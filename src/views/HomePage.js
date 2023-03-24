@@ -3,7 +3,6 @@ import BannerBackground from "../Assets/home-banner-background2.png";
 import BannerImage from "../Assets/tt.png";
 // import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
-import { background } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
@@ -11,7 +10,7 @@ const HomePage = () => {
       {/* <Navbar /> */}
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
-          <img src={BannerBackground} alt="" />
+          {/* <img src={BannerBackground} alt="" /> */}
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">

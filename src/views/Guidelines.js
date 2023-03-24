@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/system';
-import { Image, Heading, Center,View} from '@chakra-ui/react';
-import WithSubnavigation from '../components/Navbar';
-import './App.css';
+import Typography from '@mui/material/Typography';
+
 import { NavLink } from 'react-bootstrap';
 
 function Guidelines() {
@@ -49,9 +48,9 @@ function Guidelines() {
 
     <div id = "main">
       <view>
-      <Heading as='h2' size='xl' paddingBottom={10} paddingTop={5} alignContent={'center'} >
+      <Typography as='h2' size='xl' paddingBottom={10} paddingTop={5} alignContent={'center'} >
         RULES & INSTRUCTIONS TO THE PLAYERS 
-      </Heading>
+      </Typography>
       <div className='mainOL'>
       <ol>
         {guidelines.map(guideline => {
