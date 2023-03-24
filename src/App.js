@@ -1,34 +1,36 @@
-import React from 'react';
-import "./App.css";
-import { Router, Route, Routes, Link, Redirect, BrowserRouter} from "react-router-dom";
-import Forms from './views/form';
+import './App.css';
+import * as React from 'react';
+import {Button, Checkbox} from '@mui/material';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Main from './views/Main';
-import { ChakraProvider } from '@chakra-ui/react'
-import WithSubnavigation from './components/Navbar';
-import { Image, Heading } from '@chakra-ui/react'
+import WithSubnavigation from './views/ResponsiveAppBar';
+import Forms from './views/Form';
+import Footer from './views/Footer';
 import Guidelines from './views/Guidelines';
-import { Banner } from './views/Banner';
-
-
+import HardCopy from './views/Hardcopy';
 function App() {
   return (
-    <div>
-      {/* <Banner /> */}
+  <div>
+    <WithSubnavigation />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/form" element={<Forms />} />
+        <Route path="/guidelines" element={<Guidelines />} />
+        <Route path="/paper" element={<HardCopy />} />
+      </Routes> 
+      </BrowserRouter>
+    <Footer />
+    {/* <StaticRouter >
       
-      <ChakraProvider>
-        <WithSubnavigation />
-        
-        
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/form" element={<Forms />} />
-            <Route path="/guidelines" element={<Guidelines />} />
-          </Routes>
-        </BrowserRouter>
-      </ChakraProvider>
-    </div>
-
+      <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/form" element={<Forms />} />
+          <Route path="/guidelines" element={<Guidelines />} /> 
+      </Routes>
+    </StaticRouter> */}
+  </div>
   );
 }
 

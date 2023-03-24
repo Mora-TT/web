@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from '@mui/system';
-import { Image, Heading, Center,View} from '@chakra-ui/react';
-import WithSubnavigation from '../components/Navbar';
+import Typography from '@mui/material/Typography';
 import './App.css';
 import { NavLink } from 'react-bootstrap';
+import BasicTable from './BasicTable';
 
 function Guidelines() {
   const gmail =<a href="mailto:morattsmashes@gmail.com" style={{color: 'blue', textDecoration: 'underline'}}>morattsmashes@gmail.com</a>
@@ -48,22 +48,35 @@ function Guidelines() {
   return (
 
     <div id = "main">
-      <view>
-      <Heading as='h2' size='xl' paddingBottom={10} paddingTop={5} alignContent={'center'} >
-        RULES & INSTRUCTIONS TO THE PLAYERS 
-      </Heading>
+      <Box   sx={{
+    background: 'black',
+    opacity: 0.85,
+    ...{
+      margin: '0 5vw',
+    },
+    marginTop: 10,
+    marginBottom: 10,
+    paddingBottom: 2
+  }} >
+      <Typography variant="h5" color={'white'} paddingBottom={3} paddingLeft={10} paddingTop={5} alignContent={'center'} gutterBottom>
+        RULES & INSTRUCTIONS TO THE PLAYERS
+      </Typography>
+
       <div className='mainOL'>
       <ol>
         {guidelines.map(guideline => {
           return (
-            <li key={guideline.key}>{guideline.description}</li>
+            <div key={guideline.key}>
+            <li key={guideline.key}>{guideline.description} </li>
+            <br />
+            </div>
           );
         })}
           <div className='subUL'>
           <ul>
             {subGuidelines.map(subGuide => {
             return (
-              <li  key={subGuide.key}>{subGuide.description}</li>
+              <li  key={subGuide.key}><p>{subGuide.description}</p></li>
             );
             })}
           </ul>
@@ -71,35 +84,19 @@ function Guidelines() {
 
       </ol>
       </div>
-      </view>
       
-      <div className="App">
-      <table >
-        <tr>
-          <th>CHAMPION CATEGORY</th>
-          <th>CANNOT PARTICIPATE</th>
-          <th>ELIGIBLE TO PARTICIPATE</th>
-        </tr>
-        {data.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td>{val.cc}</td>
-              <td>{val.cp}</td>
-              <td>{val.ep}</td>
-            </tr>
-          )
-        })}
-      </table>
+      <div className='tableInfo'>
+      <BasicTable  />
     </div>
-      <div className="text">
+      <div className="contactInfo" style={{color: 'white'}}>
 
-      Please Contact : <br/>
-      <b>Mr. Supuna Warusawithana</b> <>{bCapMobile}</><br/>
-      <b>Miss. Divya Karunasena</b>  <>{gCapMobile}</>
+      Please Contact : <br/><br/>
+      <b >Mr. Supuna Warusawithana: </b> <>{bCapMobile}</><br/> <br/>
+      <b>Ms. Divya Karunasena: </b>  <>{gCapMobile}</>
 
       </div>
 
-
+      </Box>
     </div>
 
   );
