@@ -29,8 +29,8 @@ export default function OutlinedCard(props) {
 
       <CardHeader
         sx={{ bgcolor: 'red'}}
-        title={<Typography variant="h6" fontWeight="bold">
-        {type}
+        title={<Typography variant="h6" fontWeight='bold'>
+        <b>{type}</b>
       </Typography>}
       />
 
