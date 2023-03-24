@@ -29,12 +29,53 @@ import HorizontalNonLinearStepper from './Stepper';
 import NovicesEvents from './NovicesEvents';
 import axios from 'axios';
 import KeepMountedModal from './Modal';
+import Modal from '@mui/material/Modal';
+import { alpha, styled } from '@mui/material/styles';
 function Forms() {
   const [input, setInput] = useState('');
 
   const [accepted, setAccepted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const [open, setOpen] = React.useState(false);
+  const [count, setCount] = React.useState(0);
+  const handleOpen = (event) => {
+   console.log(event.target);
+    if (event.target.under19.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under17.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under15.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under13.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under11.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under9.checked) {
+      setCount(count + 100)
+    }
+    if (event.target.under7.checked) {
+      setCount(count + 100)
+    }
+    setOpen(true);
+  }
+  const handleClose = () => setOpen(false);
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'white',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
   // const responseBody = {fullName: "", tournamentName: "", school: "", address: "", contactNo: 0, whatsappNo: 0, regNo: "",gender: "",upload:"", dob: "", ageYears: 0, ageMonths: 0, under19: false}
   const responseBody = {name: "", url: ""}
   const handleInputChange = (e) => setInput(e.target.value)
@@ -63,35 +104,6 @@ function Forms() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-//     // responseBody.firstName = firstName
-//     // responseBody.lastName = lastName
-//     // responseBody.age = age
-//     responseBody.name = event.target.fullName.value
-//     responseBody.url = event.target.tournamentName.value
-//     responseBody.school = event.target.school.value
-//     responseBody.address = event.target.address.value
-//     responseBody.contactNo = event.target.contactNo.value
-//     responseBody.whatsappNo = event.target.whatsappNo.value
-//     responseBody.regNo = event.target.regNo.value
-//     responseBody.gender = event.target.gender.value
-//     responseBody.upload = event.target.upload.value
-//     // responseBody.dob = event.target.dob.value
-//     // responseBody.under19 = event.target.under19.checked
-//     const data = {
-//       "fullName": "sandarukaveesh", // Example: get the name of the PDF from the HTTP request body
-//       "tournamentName": "suvani",
-//       "upload": responseBody.upload
-//     };
-//     // const response = await fetch('http://127.0.0.1:5000/user/register', {
-//     //   method: 'POST',
-//     //   body: data,
-//     // }).then(response => response.json()).then(data => console.log(data))
-//     axios.post('http://127.0.0.1:5000/user/register', data)
-//     .then(response => console.log(response));
-
-//     // console.log(JSON.stringify(responseBody));
-//     // console.log(result);
-// //Form submission happens here
 
   const novicesEvents = {
     under19: false,
@@ -219,15 +231,29 @@ console.log(event.target.upload.files[0]);
     // your styles here
     width: isScreenSmall ? 'none' : 1000,
     maxWidth: '100%', 
+    color: 'white'
   };
-
+  const ValidationTextField = styled(TextField)({
+    '& input:valid + fieldset': {
+      borderColor: 'white',
+      borderWidth: 2,
+    },
+    '& input:invalid + fieldset': {
+      borderColor: 'white',
+      borderWidth: 2,
+    },
+    '& input:valid:focus + fieldset': {
+      borderLeftWidth: 6,
+      padding: '4px !important', // override inline-style
+    },
+  });
 
   return (
-    <div>
+    <div style={{color: 'white'}}>
 
       <Box borderRadius='md' bg='tomato' px={5} h={8} paddingTop={5}>
         
-        <p >*** Read the <Link color='#000000' href='/guidelines'>guidelines</Link> carefully before submitting the form.</p>
+        <p >*** Read the <Link href='/guidelines'>guidelines</Link> carefully before submitting the form.</p>
         
         <Typography variant="h5" gutterBottom>
         Registration Form
@@ -237,8 +263,14 @@ console.log(event.target.upload.files[0]);
         <form onSubmit={e => handleSubmit(e)}>
 
         
-        <FormControl >         
-        <TextField style={styles}  id="standard" name="fullName" value={formData.fullName} onChange={handleInputChanges} label="Name in Full" variant="standard" fullWidth />
+        <FormControl>         
+        <TextField variant="filled" color="success" style={styles}  id="standard" name="fullName" value={formData.fullName} onChange={handleInputChanges} label="Name in Full" fullWidth />
+        {/* <ValidationTextField
+        label="CSS validation style"
+        required
+        variant="outlined"
+        id="validation-outlined-input"
+      /> */}
         </FormControl>
        
         <br />
@@ -330,7 +362,21 @@ console.log(event.target.upload.files[0]);
 
         <br />
 
-        <KeepMountedModal/>
+        {/* <Button type="submit" onSubmit={handleOpen} sx={{color: '#4c4c4c', marginLeft: '-7px', marginBottom: '18px'}} >Check Payment</Button>
+          <Modal
+            keepMounted
+            open={open}
+            onClose={handleClose}
+          >
+            <Box sx={style}>
+              <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
+                Total Payment
+              </Typography>
+              <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+                Required amount is  {count} LKR
+              </Typography>
+            </Box>
+          </Modal> */}
         
         <FormControl >
             <div style={styles} >
@@ -341,7 +387,7 @@ console.log(event.target.upload.files[0]);
         <br /> 
 
         
-        <Button variant="solid" type="submit" id='submit-button' sx={{background: "#ff2623", color: "white", marginBottom: '80px'}}>Submit</Button>
+        <Button variant="solid" type="submit" id='submit-button' name='submitButton' sx={{background: "#ff2623", color: "white", marginBottom: '300px'}}>Submit</Button>
         </form>
       </Box>
     </div>

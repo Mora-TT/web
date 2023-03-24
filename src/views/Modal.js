@@ -23,21 +23,7 @@ export default function KeepMountedModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen} sx={{color: '#4c4c4c', marginLeft: '-7px', marginBottom: '18px'}} >Check Payment</Button>
-      <Modal
-        keepMounted
-        open={open}
-        onClose={handleClose}
-      >
-        <Box sx={style}>
-          <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
-            Total Payment
-          </Typography>
-          <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-             Required amount is  .... LKR
-          </Typography>
-        </Box>
-      </Modal>
+
     </div>
   );
 }
