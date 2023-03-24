@@ -27,7 +27,6 @@ import Radio from '@mui/joy/Radio';
 import RadioGroup from '@mui/joy/RadioGroup';
 import HorizontalNonLinearStepper from './Stepper';
 import NovicesEvents from './NovicesEvents';
-import axios from 'axios';
 import KeepMountedModal from './Modal';
 import Modal from '@mui/material/Modal';
 import { alpha, styled } from '@mui/material/styles';
