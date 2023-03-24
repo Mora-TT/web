@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
   const ResponsiveDialog = () => {
     return(
     <div>
-      <Button onClick={handleClickOpen}  style={{color: 'white', paddingTop: '22px'}}>
+      <Button onClick={handleClickOpen}  style={{color: 'white',fontWeight: 700, paddingTop: '22px'}}>
         Registration
       </Button>
       <Dialog
@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
           </IconButton>
         <DialogContent>
           <DialogContentText>
-            Choose whether the form is submitted on paper (using the hard copy) or the online mode.
+          Please note that filling out the entry form using either one of these methods will be sufficient.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -117,7 +117,7 @@ function ResponsiveAppBar() {
   };
   const isScreenSmall = useMediaQuery('(max-width:600px)');
   return (
-    <AppBar position="static" sx={{width: isScreenSmall ? 420: '100%'}} style={{background: "#ff2623"}}>
+    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#ff2623"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -181,7 +181,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Link href='/guidelines' underline="none">
-                  <Typography textAlign="center" color={'#4c4c4c'}>Guidelines</Typography>
+                  <Typography textAlign="center" color={'#4c4c4c'} >Guidelines</Typography>
                   </Link>
                 </MenuItem>
               
@@ -209,9 +209,9 @@ function ResponsiveAppBar() {
           >
             
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' ,fontWeight: 700} }}>
               <Link href='/' underline="none">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px' }} >
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
                 {"Home"}
               </Button>
               </Link>
@@ -219,7 +219,7 @@ function ResponsiveAppBar() {
               
               <ResponsiveDialog onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px' }} ></ResponsiveDialog>
               <Link href='/guidelines' underline="none">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px' }} >
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
                 {"Guidelines"}
               </Button>
               </Link>
