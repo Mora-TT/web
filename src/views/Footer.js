@@ -7,34 +7,38 @@ import {
   MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
-
+import {
+  Button,
+  Link
+} from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
 export default function Footer() {
   return (
+    <div className='footer'>
     <MDBFooter className='bg-dark text-center text-white'>
       <MDBContainer className='p-4 pb-0'>
         <section className='mb-4'>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='facebook-f' />
-          </MDBBtn>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='twitter' />
-          </MDBBtn>
+          <Link href='https://www.facebook.com/moratabletennis' >
+            <Button variant="outlined" component="label" >
+            <FacebookIcon />
+            </Button>
+          </Link>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='google' />
-          </MDBBtn>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='instagram' />
-          </MDBBtn>
+          <Link href='' >
+          <Button variant="outlined" component="label" >
+          <TwitterIcon  />
+         </Button>
+         </Link>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='linkedin-in' />
-          </MDBBtn>
+         <Link href='mailto:morattsmashes@gmail.com' >
+         <Button variant="outlined"  component="label" >
+         <EmailIcon  />
+         </Button>
+         </Link>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='github' />
-          </MDBBtn>
         </section>
       </MDBContainer>
 
@@ -45,5 +49,6 @@ export default function Footer() {
         </a>
       </div>
     </MDBFooter>
+    </div>
   );
 }
