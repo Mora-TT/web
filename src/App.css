@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Reem Kufi", sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
+  /* font-family: "Reem Kufi", sans-serif !important; */
 
 }
-
+body {
+  background-image: url('Assets/img1.png');
+  background-size: cover;
+  background-position: center;
+  /* backdrop-filter: blur(5px); */
+  opacity: 0.95; /* Set the opacity to 90% */
+}
 img {
   max-width: 100%;
   height: auto;
@@ -21,9 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  background-color: #f6f6f6;
-}
 
 nav {
   display: flex;
@@ -52,6 +58,30 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
+.mainOL {
+  color: white;
+  margin-left: 35px;
+  font-weight: 600;
+}
+.contactInfo {
+  margin-left: 60px;
+  margin-bottom: 300px;
+  color: 'white';
+  font-weight: 600;
+}
+.tableInfo {
+  margin-left: 35px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  /* Add any other styles you want for the Footer component */
+}
 .navbar-cart-icon {
   font-size: 1.15rem;
 }
@@ -69,6 +99,7 @@ nav {
   position: relative;
   display: flex;
   padding-top: 3rem;
+  opacity: 0.8;
 }
 .home-bannerImage-container {
   position: absolute;
@@ -80,7 +111,8 @@ nav {
 .home-image-section {
   max-width: 2000px;
   /* flex: 1; */
-  z-index: 1;
+  z-index: -1;
+
 }
 .home-text-section {
   flex: 1;
@@ -90,15 +122,19 @@ nav {
   align-items: flex-start;
 }
 .primary-heading {
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2rem, 5vw, 4rem);
-  color: #4c4c4c;
+  font-weight: 500;
+  color: #FFFFFF;
   /* line-height: 5rem; */
   max-width: 600px;
 }
+
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
-  color: #6a6a6a;
+  font-weight: 400;
+  color: #FFFFFF;
   margin: 1.5rem 0rem;
 }
 .secondary-button {
@@ -114,7 +150,9 @@ nav {
   transition: 0.2s;
   display: flex;
   align-items: center;
+  margin-top: 35px;
   justify-content: center;
+  /* margin-bottom: 300px; */
 }
 .secondary-button svg {
   margin-left: 0.75rem;
@@ -426,7 +464,7 @@ nav {
     max-width: 95vw;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;
