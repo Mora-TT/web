@@ -1,19 +1,15 @@
 import React from 'react';
 import {
   MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn
+  MDBContainer
 } from 'mdb-react-ui-kit';
 import {
   Button,
   Link
 } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import EmailIcon from '@mui/icons-material/Email';
+import { BsFacebook, BsTwitter } from 'react-icons/bs';
+import { MdEmail } from 'react-icons/md';
+
 export default function Footer() {
   return (
     <div className='footer'>
@@ -23,19 +19,19 @@ export default function Footer() {
 
           <Link href='https://www.facebook.com/moratabletennis' >
             <Button variant="outlined" component="label" >
-            <FacebookIcon />
+            <BsFacebook />
             </Button>
           </Link>
 
           <Link href='' >
           <Button variant="outlined" component="label" >
-          <TwitterIcon  />
+          <BsTwitter  />
          </Button>
          </Link>
 
          <Link href='mailto:morattsmashes@gmail.com' >
          <Button variant="outlined"  component="label" >
-         <EmailIcon  />
+         <MdEmail  />
          </Button>
          </Link>
 

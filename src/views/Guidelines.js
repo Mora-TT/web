@@ -2,7 +2,6 @@ import React from 'react';
 import { Box } from '@mui/system';
 import Typography from '@mui/material/Typography';
 import './App.css';
-import { NavLink } from 'react-bootstrap';
 import BasicTable from './BasicTable';
 
 function Guidelines() {

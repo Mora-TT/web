@@ -5,13 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+import { GrMenu } from 'react-icons/gr';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,8 +20,10 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Link } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { GrClose } from 'react-icons/gr';
 import iconImage from '../Assets/out.png';
+
+
 const pages = ['Home', 'Registration', 'Guidelines'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -76,7 +75,7 @@ function ResponsiveAppBar() {
               color: (theme) => theme.palette.grey[500],
             }}
           >
-            <CloseIcon />
+            <GrClose />
           </IconButton>
         <DialogContent>
           <DialogContentText>
@@ -151,7 +150,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <GrMenu />
             </IconButton>
             <Menu
               id="menu-appbar"

@@ -1,5 +1,4 @@
 import React from "react";
-import BannerBackground from "../Assets/home-banner-background2.png";
 import BannerImage from "../Assets/smashes.png";
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -12,12 +11,9 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Link } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import iconImage from '../Assets/out.png';
-// import Navbar from "./Navbar";
+import { GrClose } from 'react-icons/gr';
 import { FiArrowRight } from "react-icons/fi";
 import CountdownTimer from "./CountdownTimer";
-import VerticalDividers from "./VerticalDivider";
 
 const HomePage = () => {
 
@@ -78,7 +74,7 @@ const HomePage = () => {
               color: (theme) => theme.palette.grey[900],
             }}
           >
-            <CloseIcon />
+            <GrClose />
           </IconButton>
         <DialogContent sx={{color: 'black'}}>
           <DialogContentText >
