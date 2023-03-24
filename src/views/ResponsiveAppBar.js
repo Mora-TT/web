@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
   const ResponsiveDialog = () => {
     return(
     <div>
-      <Button onClick={handleClickOpen}  style={{color: 'white',fontWeight: 700, paddingTop: '22px'}}>
+      <Button onClick={handleClickOpen}  style={{color: 'white',fontWeight: 700, marginTop: '16px'}}>
         Registration
       </Button>
       <Dialog
@@ -91,7 +91,7 @@ function ResponsiveAppBar() {
           </Button>
         </Link>
           
-          <Link href="/form" underline="none">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeM0ruhA0o1nbzr14mGUmJua7UjmdTHBKIkjjYwRPpitayTwQ/viewform?usp=sf_link" underline="none">
           <Button onClick={handleClose} autoFocus>
             Online Mode
           </Button>
@@ -117,7 +117,7 @@ function ResponsiveAppBar() {
   };
   const isScreenSmall = useMediaQuery('(max-width:600px)');
   return (
-    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#ff2623"}}>
+    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#ea0020e0"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}

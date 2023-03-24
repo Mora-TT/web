@@ -200,7 +200,7 @@ function GeneralForm() {
         </FormControl>
 
 
-        <Button variant="solid" type="submit" id='submit-button' sx={{background: "#ff2623", color: "white"}}>Complete Step</Button>
+        <Button variant="solid" type="submit" id='submit-button' sx={{background: "#ea0020e0", color: "white"}}>Complete Step</Button>
         </form>
       </Box>
     </div>

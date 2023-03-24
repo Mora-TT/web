@@ -191,7 +191,7 @@ function EventsForm() {
         </FormControl>
         <br />
 
-        <Button variant="solid" type="submit" id='submit-button' sx={{background: "#ff2623", color: "white"}}>Submit</Button>
+        <Button variant="solid" type="submit" id='submit-button' sx={{background: "#ea0020e0", color: "white"}}>Submit</Button>
         </form>
       </Box>
     </div>

@@ -24,15 +24,19 @@ export default function OutlinedCard(props) {
     const { count } = props;
     const { type } = props;
   return (
-    <Box sx={{ minWidth: 150, marginRight: 1, marginBottom: 5 }}>
-      <Card variant="outlined" sx={{ height: 150, bgcolor: '#ff4123e0', paddingBottom: 25 }}>
+    <Box sx={{ minWidth: 150, marginRight: 1, marginBottom: 50 }}>
+      <Card variant="outlined" sx={{ height: 150, bgcolor: '#871200e0', paddingBottom: 25 }}>
+
       <CardHeader
-        title={type}
         sx={{ bgcolor: 'red'}}
+        title={<Typography variant="h6" fontWeight="bold">
+        {type}
+      </Typography>}
       />
-      <Divider color={'black'} sx={{ bgcolor: 'red'}}/>
+
+      <Divider color={'black'} sx={{ bgcolor: '#871200e0'}}/>
             <CardContent>
-            <Typography variant="h3" color={"white"} gutterBottom>
+            <Typography sx={{fontWeight: 700}} variant="h3" color={"white"} gutterBottom>
                 {count} 
             </Typography>
             </CardContent>

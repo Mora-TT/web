@@ -27,6 +27,7 @@ function HardCopy() {
   return (
 
     <div id = "main">
+      <Box sx={{background: 'black', opacity: 0.7, marginTop: 10, marginBottom: 50}}>
       <Typography variant="h5" color={'white'} paddingBottom={3} paddingLeft={10} paddingTop={5} alignContent={'center'} gutterBottom>
       Registration: On Paper
       </Typography>
@@ -45,7 +46,7 @@ function HardCopy() {
         })}
       </ol>
       </div>
-
+      </Box>
     </div>
 
   );

@@ -387,7 +387,7 @@ console.log(event.target.upload.files[0]);
         <br /> 
 
         
-        <Button variant="solid" type="submit" id='submit-button' name='submitButton' sx={{background: "#ff2623", color: "white", marginBottom: '300px'}}>Submit</Button>
+        <Button variant="solid" type="submit" id='submit-button' name='submitButton' sx={{background: "#ea0020e0", color: "white", marginBottom: '300px'}}>Submit</Button>
         </form>
       </Box>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import BannerBackground from "../Assets/home-banner-background2.png";
-import BannerImage from "../Assets/tt.png";
+import BannerImage from "../Assets/smashes.png";
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -65,7 +65,7 @@ const HomePage = () => {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">
+        <DialogTitle id="responsive-dialog-title" sx={{color: 'black'}}>
           {"Choose the Registration Mode"}
         </DialogTitle>
         <IconButton
@@ -75,13 +75,13 @@ const HomePage = () => {
               position: 'absolute',
               right: 8,
               top: 8,
-              color: (theme) => theme.palette.grey[500],
+              color: (theme) => theme.palette.grey[900],
             }}
           >
             <CloseIcon />
           </IconButton>
-        <DialogContent>
-          <DialogContentText>
+        <DialogContent sx={{color: 'black'}}>
+          <DialogContentText >
             Please note that filling out the entry form using either one of these methods will be sufficient.
           </DialogContentText>
         </DialogContent>
@@ -93,7 +93,7 @@ const HomePage = () => {
           </Button>
         </Link>
           
-          <Link href="/form" underline="none">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeM0ruhA0o1nbzr14mGUmJua7UjmdTHBKIkjjYwRPpitayTwQ/viewform?usp=sf_link" underline="none">
           <Button onClick={handleClose} autoFocus>
             Online Mode
           </Button>

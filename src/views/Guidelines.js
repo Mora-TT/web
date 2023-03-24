@@ -48,6 +48,16 @@ function Guidelines() {
   return (
 
     <div id = "main">
+      <Box   sx={{
+    background: 'black',
+    opacity: 0.85,
+    ...{
+      margin: '0 5vw',
+    },
+    marginTop: 10,
+    marginBottom: 10,
+    paddingBottom: 2
+  }} >
       <Typography variant="h5" color={'white'} paddingBottom={3} paddingLeft={10} paddingTop={5} alignContent={'center'} gutterBottom>
         RULES & INSTRUCTIONS TO THE PLAYERS
       </Typography>
@@ -86,7 +96,7 @@ function Guidelines() {
 
       </div>
 
-
+      </Box>
     </div>
 
   );

@@ -19,7 +19,7 @@ const rows = [
 export default function BasicTable() {
   return (
 
-      <Table sx={{marginLeft: '80px', fontColor: 'white'}}  aria-label="simple table">
+      <Table sx={{marginLeft: '5vw', marginRight: '5vw', fontColor: 'white'}}  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell sx={{color: 'white', fontWeight: 600}}><b>CHAMPION CATEGORY</b></TableCell>
