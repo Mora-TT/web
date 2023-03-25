@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/67b95504-13b2-45af-8b92-072f80b02614/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/mora-tt-smashes",
+    "appService.deploySubpath": "."
+}

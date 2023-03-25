@@ -5,13 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+import { GrMenu } from 'react-icons/gr';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,8 +20,10 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Link } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { GrClose } from 'react-icons/gr';
 import iconImage from '../Assets/out.png';
+
+
 const pages = ['Home', 'Registration', 'Guidelines'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -54,7 +53,7 @@ function ResponsiveAppBar() {
   const ResponsiveDialog = () => {
     return(
     <div>
-      <Button onClick={handleClickOpen}  style={{color: 'white',fontWeight: 700, marginTop: '16px'}}>
+      <Button onClick={handleClickOpen}  style={{color: 'black',fontWeight: 700, marginTop: '16px'}}>
         Registration
       </Button>
       <Dialog
@@ -76,7 +75,7 @@ function ResponsiveAppBar() {
               color: (theme) => theme.palette.grey[500],
             }}
           >
-            <CloseIcon />
+            <GrClose />
           </IconButton>
         <DialogContent>
           <DialogContentText>
@@ -86,13 +85,13 @@ function ResponsiveAppBar() {
         <DialogActions>
 
         <Link href="/paper" underline="none">
-          <Button autoFocus onClick={handleClose}>
+          <Button autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5', paddingLeft: 20,paddingRight: 20, borderRadius: '10px'}}>
             On Paper
           </Button>
         </Link>
           
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeM0ruhA0o1nbzr14mGUmJua7UjmdTHBKIkjjYwRPpitayTwQ/viewform?usp=sf_link" underline="none">
-          <Button onClick={handleClose} autoFocus>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
+          <Button onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5', paddingLeft: 20,paddingRight: 20,borderRadius: '10px'}}>
             Online Mode
           </Button>
           </Link>
@@ -117,7 +116,7 @@ function ResponsiveAppBar() {
   };
   const isScreenSmall = useMediaQuery('(max-width:600px)');
   return (
-    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#ea0020e0"}}>
+    <AppBar position="static" sx={{width:'auto'}} style={{background: "#ededede0", opacity: 0.85}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -151,7 +150,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <GrMenu />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -184,6 +183,11 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center" color={'#4c4c4c'} >Guidelines</Typography>
                   </Link>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href='/contact' underline="none">
+                  <Typography textAlign="center" color={'#4c4c4c'} >Contact Us</Typography>
+                  </Link>
+                </MenuItem>
               
             </Menu>
           </Box>
@@ -211,7 +215,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' ,fontWeight: 700} }}>
               <Link href='/' underline="none">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
                 {"Home"}
               </Button>
               </Link>
@@ -219,8 +223,14 @@ function ResponsiveAppBar() {
               
               <ResponsiveDialog onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px' }} ></ResponsiveDialog>
               <Link href='/guidelines' underline="none">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
                 {"Guidelines"}
+              </Button>
+              </Link>
+
+              <Link href='/contact' underline="none">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block', paddingLeft: '20px', paddingRight: '30px', fontWeight: 700 }} >
+                {"Contact Us"}
               </Button>
               </Link>
             

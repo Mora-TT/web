@@ -2,7 +2,6 @@ import React from 'react';
 import { Box } from '@mui/system';
 import Typography from '@mui/material/Typography';
 import './App.css';
-import { NavLink } from 'react-bootstrap';
 import BasicTable from './BasicTable';
 
 function Guidelines() {
@@ -13,19 +12,20 @@ function Guidelines() {
   const guidelines = [
     {description: 'All matches will be played as far as possible in accordance with the laws of the International Table Tennis federation.', key: 0},
     {description: '	The championship will be run on a knockout basis.', key: 1},
-    {description: 	'The championship will be conducted at the New Gymnasium, University of Moratuwa and will commence at 08.00 a.m. on 29th April 2023 and will continue till 30th April 2023.', key: 3},
+    {description: 	'The championship will be conducted at the New Gymnasium, University of Moratuwa and will commence at on 12th, 13th and 14th May 2023.', key: 3},
     {description: 	'The following events will be worked out; Intermediate / Novices , Men’s / Women’s / Boys / Girl’s, Novices under 07 / 09 / 11 / 13 / 15 /17 /19 Singles.', key: 2},
     {description: 	'All entry forms must be signed by the competitor, players who are still schooling must obtain the signature of the principal on the college rubber stamp. The Tournament committee has the right to reject any unsigned entry.', key: 4},
     {description: 	'All matches in the Novices events will be decided on the best of three (03) games.', key: 5},
-    {description: 	'All disputes with regard to the interpretation of laws of Table Tennis shall be referred to Hon. Referee for the championship Mr. Pradeep Nishantha and tournament in charge Mr. Chandana Perera.', key: 6},
+    {description: 	'All disputes with regard to the interpretation of laws of Table Tennis shall be referred to Hon. Referee for the tournament Mr. Pradeep Nishantha and tournament in charge Mr. Chandana Perera.', key: 6},
     {description: 	'The draw and program will be displayed on the notice board at the venue, and it will serve as the only official information of the Championship.', key: 7},
-    {description: 	'Entries close on 10th April 2023 at 3.00p.m. and the draw will be held on 21st April 2023 at 06.00pm, at University of Moratuwa.', key: 8},
+    {description: 	'Entries close on 21st April 2023 at 3.00p.m. and the draw will be held on _ _ May 2023 at 06.00pm, at University of Moratuwa.', key: 8},
     {description: 'ENTRY FEES: Rs. 500/= for the Intermediate & Novices events & Rs.400/= for Age Group event/s. Rs. 100/= will be charge as competition fees from each player. ', key: 9},
-    {description: <>Entries without the entry fee/s will not be included in the draw. Entries may be forwarded to reach by 03.00p.m. on 10th April 2023 to Mr. Supuna Warusawithana ,C/o Department of Physical Education,University of Moratuwa. Or by email as a PDF document to {gmail}/ {uomMail}</>, key: 10},
+    //{description: <>Entries without the entry fee/s will not be included in the draw. Entries may be forwarded to reach by 03.00p.m. on 10th April 2023 to Mr. Supuna Warusawithana ,C/o Department of Physical Education,University of Moratuwa. Or by email as a PDF document to {gmail}/ {uomMail}</>, key: 10},
     {description: 'Competitors should report to the tournament office 10 minutes before the scheduled time for each Match.', key: 11},  
     {description:   'An individual player cannot participate in more than two age group single events.', key: 12},  
     {description: 'The Tournament committee’s decision in all matters connected with the championship and any other matters not expressly provided herein shall be final and binding.', key: 13},  
-    {description: 'NON-ELIGIBILITY TO PLAY', key: 14},  
+    {description: 'Filling either online or on paper will be enough.No need to fill both', key: 14}, 
+    {description: 'NON-ELIGIBILITY TO PLAY', key: 15},  
 
   ];
   
@@ -88,13 +88,13 @@ function Guidelines() {
       <div className='tableInfo'>
       <BasicTable  />
     </div>
-      <div className="contactInfo" style={{color: 'white'}}>
+      {/* <div className="contactInfo" style={{color: 'white'}}>
 
       Please Contact : <br/><br/>
       <b >Mr. Supuna Warusawithana: </b> <>{bCapMobile}</><br/> <br/>
       <b>Ms. Divya Karunasena: </b>  <>{gCapMobile}</>
 
-      </div>
+      </div> */}
 
       </Box>
     </div>

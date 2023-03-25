@@ -1,5 +1,4 @@
 import React from "react";
-import BannerBackground from "../Assets/home-banner-background2.png";
 import BannerImage from "../Assets/smashes.png";
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -12,13 +11,10 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Link } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import iconImage from '../Assets/out.png';
-// import Navbar from "./Navbar";
+import { GrClose } from 'react-icons/gr';
 import { FiArrowRight } from "react-icons/fi";
 import CountdownTimer from "./CountdownTimer";
-import VerticalDividers from "./VerticalDivider";
-
+import './Banner.css';
 const HomePage = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -32,20 +28,20 @@ const HomePage = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  const targetDate = new Date('2023-05-07T23:59:59');
+  const targetDate = new Date('2023-04-21T09:30:00');
   return (
 
     
     <div className="home-container">
       
-
+      <div className="banner">
       {/* <Navbar /> */}
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           {/* <img src={BannerBackground} alt="" /> */}
         </div>
-        <div className="home-text-section" sx={{color: 'white'}}>
-          <h1 className="primary-heading" >
+        <div className="home-text-section" >
+          <h1 className="primary-heading" sx={{color: '#000000'}}>
           MORA SMASHES 
           </h1>
           <h1 className="primary-heading">2023</h1>
@@ -78,7 +74,7 @@ const HomePage = () => {
               color: (theme) => theme.palette.grey[900],
             }}
           >
-            <CloseIcon />
+            <GrClose />
           </IconButton>
         <DialogContent sx={{color: 'black'}}>
           <DialogContentText >
@@ -88,13 +84,13 @@ const HomePage = () => {
         <DialogActions>
 
         <Link href="/paper" underline="none">
-          <Button autoFocus onClick={handleClose}>
+          <Button variant="outlined" autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5', borderRadius: '20px'}} >
             On Paper
           </Button>
         </Link>
           
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeM0ruhA0o1nbzr14mGUmJua7UjmdTHBKIkjjYwRPpitayTwQ/viewform?usp=sf_link" underline="none">
-          <Button onClick={handleClose} autoFocus>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
+          <Button variant="outlined" onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5', borderRadius: '20px'}}>
             Online Mode
           </Button>
           </Link>
@@ -104,6 +100,7 @@ const HomePage = () => {
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
         </div>
+      </div>
       </div>
     </div>
   );

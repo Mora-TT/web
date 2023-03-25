@@ -1,13 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+
 const bull = (
   <Box
     component="span"
@@ -24,19 +22,19 @@ export default function OutlinedCard(props) {
     const { count } = props;
     const { type } = props;
   return (
-    <Box sx={{ minWidth: 150, marginRight: 1, marginBottom: 50 }}>
-      <Card variant="outlined" sx={{ height: 150, bgcolor: '#871200e0', paddingBottom: 25 }}>
+    <Box sx={{ minWidth: 120, marginRight: 1, marginBottom: 5 }}>
+      <Card variant="outlined" sx={{ height: 75, bgcolor: '#060606e0', paddingBottom: 20 }}>
 
       <CardHeader
-        sx={{ bgcolor: 'red'}}
-        title={<Typography variant="h6" fontWeight='bold'>
+        sx={{ bgcolor: 'black'}}
+        title={<Typography color={'white'} variant="h7" fontWeight='bold'>
         <b>{type}</b>
       </Typography>}
       />
 
       <Divider color={'black'} sx={{ bgcolor: '#871200e0'}}/>
             <CardContent>
-            <Typography sx={{fontWeight: 700}} variant="h3" color={"white"} gutterBottom>
+            <Typography sx={{fontWeight: 700}} variant="h4" color={"white"} gutterBottom>
                 {count} 
             </Typography>
             </CardContent>
