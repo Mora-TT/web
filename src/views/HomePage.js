@@ -14,7 +14,7 @@ import { Link } from '@mui/material';
 import { GrClose } from 'react-icons/gr';
 import { FiArrowRight } from "react-icons/fi";
 import CountdownTimer from "./CountdownTimer";
-
+import './Banner.css';
 const HomePage = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -34,7 +34,7 @@ const HomePage = () => {
     
     <div className="home-container">
       
-
+      <div className="banner">
       {/* <Navbar /> */}
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
@@ -100,6 +100,7 @@ const HomePage = () => {
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
         </div>
+      </div>
       </div>
     </div>
   );

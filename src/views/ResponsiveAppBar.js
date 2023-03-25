@@ -116,7 +116,7 @@ function ResponsiveAppBar() {
   };
   const isScreenSmall = useMediaQuery('(max-width:600px)');
   return (
-    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#ea0020e0"}}>
+    <AppBar position="static" sx={{width: isScreenSmall ? 500: '100%'}} style={{background: "#818181e0"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}

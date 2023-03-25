@@ -11,7 +11,7 @@ function App() {
   return (
   <div>
     <WithSubnavigation />
-    <BrowserRouter>
+    <BrowserRouter >
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/guidelines" element={<Guidelines />} />
