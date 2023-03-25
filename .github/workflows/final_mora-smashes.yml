@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'mora-smashes'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4D97DCBB348145A2BE79BF69FA9C0075 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_58D325B22E064A73AA2E3EF5D2D25AD3 }}
           package: .
