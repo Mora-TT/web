@@ -39,10 +39,12 @@ export default function Footer() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2023 Copyright:
-        <a className='text-white' href='https://mora-smashes.com/' style={{ paddingLeft: '10px' }}>
+        © 2023 Copyright: &nbsp; MORA Table Tennis 
+        {/* <a className='text-white' href='https://mora-smashes.com/' style={{ paddingLeft: '10px' }}>
           www.mora-smashes.com
-        </a>
+        </a> */}
+          
+
       </div>
     </MDBFooter>
     </div>

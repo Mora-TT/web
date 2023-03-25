@@ -85,13 +85,13 @@ function ResponsiveAppBar() {
         <DialogActions>
 
         <Link href="/paper" underline="none">
-          <Button autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5'}}>
+          <Button autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5', paddingLeft: 20,paddingRight: 20, borderRadius: '10px'}}>
             On Paper
           </Button>
         </Link>
           
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
-          <Button onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5'}}>
+          <Button onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5', paddingLeft: 20,paddingRight: 20,borderRadius: '10px'}}>
             Online Mode
           </Button>
           </Link>
@@ -116,7 +116,7 @@ function ResponsiveAppBar() {
   };
   const isScreenSmall = useMediaQuery('(max-width:600px)');
   return (
-    <AppBar position="static" sx={{width:'auto'}} style={{background: "#ededede0", opacity: 0.7}}>
+    <AppBar position="static" sx={{width:'auto'}} style={{background: "#ededede0", opacity: 0.85}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -220,6 +220,12 @@ function ResponsiveAppBar() {
               <Link href='/guidelines' underline="none">
               <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block', paddingLeft: '30px', paddingRight: '30px', fontWeight: 700 }} >
                 {"Guidelines"}
+              </Button>
+              </Link>
+
+              <Link href='/contact' underline="none">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'black', display: 'block', paddingLeft: '20px', paddingRight: '30px', fontWeight: 700 }} >
+                {"Contact Us"}
               </Button>
               </Link>
             

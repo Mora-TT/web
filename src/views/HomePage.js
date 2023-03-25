@@ -28,7 +28,7 @@ const HomePage = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  const targetDate = new Date('2023-05-07T23:59:59');
+  const targetDate = new Date('2023-04-21T09:30:00');
   return (
 
     
@@ -84,13 +84,13 @@ const HomePage = () => {
         <DialogActions>
 
         <Link href="/paper" underline="none">
-          <Button variant="outlined" autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5'}} >
+          <Button variant="outlined" autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5', borderRadius: '20px'}} >
             On Paper
           </Button>
         </Link>
           
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
-          <Button variant="outlined" onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5'}}>
+          <Button variant="outlined" onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5', borderRadius: '20px'}}>
             Online Mode
           </Button>
           </Link>
