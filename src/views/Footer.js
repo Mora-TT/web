@@ -38,7 +38,7 @@ export default function Footer() {
         </section>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingBottom: '30px' }}>
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2023 Copyright:
         <a className='text-white' href='https://mora-smashes.com/' style={{ paddingLeft: '10px' }}>
           www.mora-smashes.com
