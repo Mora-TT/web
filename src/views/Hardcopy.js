@@ -13,7 +13,7 @@ function HardCopy() {
     {description: <>Print out a hard copy of the form.</>, key: 1},
     {description: <>Fill out the form carefully, making sure to provide all the required information. Make sure to complete all sections of the form, including personal information, contact details, and any other relevant information.
       </>, key: 2},
-    {description: <>The closing date for registration is 12/4/2023, so make sure to submit your completed form by email to {email1} or {email2} or by mail to <b>{address}</b> before this date.</>, key: 3},
+    {description: <>The closing date for registration is 12/4/2023, so make sure to submit your completed form by mail to {address} before this date.</>, key: 3},
     {description: <>Further instructions are provided in the PDF registration form, which will be available for download once you click on the registration form link. Make sure to carefully review and follow all instructions provided in the form. If you have any questions or concerns, please contact us at <b>{contacts}</b>.</>, key: 4},
   ];
 

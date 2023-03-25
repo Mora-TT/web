@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Merriweather', serif !important;
   /* font-family: "Reem Kufi", sans-serif !important; */
 
 }
 body {
-  background-image: url('Assets/img1.png');
+  background-image: url('Assets/gold.jpg');
   background-size: cover;
   background-position: center;
   /* backdrop-filter: blur(5px); */
@@ -125,7 +125,7 @@ nav {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 500;
-  color: #FFFFFF;
+  color: #000000;
   /* line-height: 5rem; */
   max-width: 600px;
 }
@@ -134,12 +134,12 @@ nav {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #000000;
   margin: 1.5rem 0rem;
 }
 .secondary-button {
   padding: 1rem 2.5rem;
-  background-color: #ea0020e0;
+  background-color: #000000e0;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -152,6 +152,7 @@ nav {
   align-items: center;
   margin-top: 35px;
   justify-content: center;
+  margin-bottom: 50px;
   /* margin-bottom: 300px; */
 }
 .secondary-button svg {
@@ -159,7 +160,7 @@ nav {
   font-size: 1.5rem;
 }
 .secondary-button:hover {
-  background-color: #ff6023;
+  background-color: #191919;
 }
 .about-section-container {
   margin-top: 20rem;

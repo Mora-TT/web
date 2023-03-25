@@ -14,7 +14,7 @@ import { Link } from '@mui/material';
 import { GrClose } from 'react-icons/gr';
 import { FiArrowRight } from "react-icons/fi";
 import CountdownTimer from "./CountdownTimer";
-
+import './Banner.css';
 const HomePage = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -34,14 +34,14 @@ const HomePage = () => {
     
     <div className="home-container">
       
-
+      <div className="banner">
       {/* <Navbar /> */}
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           {/* <img src={BannerBackground} alt="" /> */}
         </div>
-        <div className="home-text-section" sx={{color: 'white'}}>
-          <h1 className="primary-heading" >
+        <div className="home-text-section" >
+          <h1 className="primary-heading" sx={{color: '#000000'}}>
           MORA SMASHES 
           </h1>
           <h1 className="primary-heading">2023</h1>
@@ -84,13 +84,13 @@ const HomePage = () => {
         <DialogActions>
 
         <Link href="/paper" underline="none">
-          <Button autoFocus onClick={handleClose}>
+          <Button variant="outlined" autoFocus onClick={handleClose} style={{color: 'white',background: '#4c351df5'}} >
             On Paper
           </Button>
         </Link>
           
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
-          <Button onClick={handleClose} autoFocus>
+          <Button variant="outlined" onClick={handleClose} autoFocus style={{color: 'white',background: '#4c351df5'}}>
             Online Mode
           </Button>
           </Link>
@@ -100,6 +100,7 @@ const HomePage = () => {
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
         </div>
+      </div>
       </div>
     </div>
   );
