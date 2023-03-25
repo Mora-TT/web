@@ -89,7 +89,7 @@ const HomePage = () => {
           </Button>
         </Link>
           
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeM0ruhA0o1nbzr14mGUmJua7UjmdTHBKIkjjYwRPpitayTwQ/viewform?usp=sf_link" underline="none">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSciPUBemQmSzjwPZE_Kwa_-N1tCwkyuZq8fBkHNyS4CwZiWig/viewform?usp=sf_link" underline="none">
           <Button onClick={handleClose} autoFocus>
             Online Mode
           </Button>
