@@ -183,6 +183,11 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center" color={'#4c4c4c'} >Guidelines</Typography>
                   </Link>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href='/contact' underline="none">
+                  <Typography textAlign="center" color={'#4c4c4c'} >Contact Us</Typography>
+                  </Link>
+                </MenuItem>
               
             </Menu>
           </Box>

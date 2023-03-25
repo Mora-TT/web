@@ -13,7 +13,7 @@ function Contact() {
   return (
 
     <div id = "main">
-      <Box sx={{background: 'black', opacity: 0.85, margin: 10, marginLeft: 40, marginRight: 40}}>
+      <Box sx={{background: 'black', opacity: 0.85, margin: '1rem', marginBottom: 60}}>
       <Typography variant="h5" color={'white'} paddingBottom={3} paddingLeft={10} paddingTop={5} alignContent={'center'} gutterBottom>
       Contact : 
       </Typography>
@@ -21,9 +21,9 @@ function Contact() {
      
       <div className="contactInfo" style={{color: 'white'}}>
 
-      <Typography variant="h6" color={'white'}  paddingBottom={3} paddingLeft={10} alignContent={'center'} gutterBottom>Mr. Supuna Warusawithana: <>{bCapMobile}</></Typography>
+      <Typography variant="h6" color={'white'}  paddingBottom={'1rem'} paddingLeft={'2rem'} alignContent={'center'} gutterBottom>Mr. Supuna Warusawithana: <>{bCapMobile}</></Typography>
 
-      <Typography variant="h6" color={'white'}  paddingBottom={10} paddingLeft={10} alignContent={'center'} gutterBottom><b>Ms. Divya Karunasena: </b>  <>{gCapMobile}</></Typography>
+      <Typography variant="h6" color={'white'}  paddingBottom={'3rem'} paddingLeft={'2rem'} alignContent={'center'} gutterBottom><b>Ms. Divya Karunasena: </b>  <>{gCapMobile}</></Typography>
       
 
       </div>
