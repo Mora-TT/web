@@ -87,25 +87,25 @@ function Guidelines() {
           </ol>
         </div>
 
-        <div class=''>
-          <Table>
+        <div className='' style={{margin: '0.5rem', marginTop: '3rem'}}>
+          <Table >
             <Thead>
               <Tr>
-                <Th>CHAMPION CATEGORY</Th>
-                <Th> CANNOT PARTICIPATE </Th>
-                <Th>ELIGIBLE TO PARTICIPATE</Th>
+                <Th style={{fontSize: '0.9em', color: 'white', marginBottom: '2rem'}}>CHAMPION CATEGORY</Th>
+                <Th style={{fontSize: '0.9em', color: 'white', marginBottom: '2rem'}}> CANNOT PARTICIPATE </Th>
+                <Th style={{fontSize: '0.9em', color: 'white', marginBottom: '2rem'}}>ELIGIBLE TO PARTICIPATE</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>UNDER 10 </Td>
-                <Td>UNDER 09</Td>
-                <Td>UNDER 11, 13, and 15 NOVICES</Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 10 </Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 09</Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 11, 13, and 15 NOVICES</Td>
               </Tr>
               <Tr>
-                <Td>UNDER 12 </Td>
-                <Td>UNDER 11 </Td>
-                <Td>UNDER 13, 15, 17, and 19 NOVICES</Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 12 </Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 11 </Td>
+                <Td style={{fontSize: '0.9em', color: '#ffd4d4', marginBottom: '2rem'}}>UNDER 13, 15, 17, and 19 NOVICES</Td>
               </Tr>
 
             </Tbody>
