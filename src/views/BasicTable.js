@@ -17,27 +17,25 @@ const rows = [
 export default function BasicTable() {
   return (
 
-      <Table sx={{marginLeft: '5vw', marginRight: '5vw', fontColor: 'white'}}  aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell sx={{color: 'white', fontWeight: 600}}><b>CHAMPION CATEGORY</b></TableCell>
-            <TableCell sx={{color: 'white', fontWeight: 600}}><b>CANNOT PARTICIPATE</b></TableCell>
-            <TableCell sx={{color: 'white', fontWeight: 600}}><b>ELIGIBLE TO PARTICIPATE</b></TableCell>
+    <Table style={{marginLeft: '2vw', marginRight: '2vw'}}>
+      <TableHead>
+        <TableRow>
+          <TableCell><b>CHAMPION CATEGORY</b></TableCell>
+          <TableCell><b>CANNOT PARTICIPATE</b></TableCell>
+          <TableCell><b>ELIGIBLE TO PARTICIPATE</b></TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row) => (
+          <TableRow key={row.col1}>
+            <TableCell style={{fontSize: '0.8em'}}>{row.col1}</TableCell>
+            <TableCell style={{fontSize: '0.8em'}}>{row.col2}</TableCell>
+            <TableCell style={{fontSize: '0.8em'}}>{row.col3}</TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.col1}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell sx={{color: 'white', fontWeight: 600}}>{row.col1}</TableCell>
-              <TableCell sx={{color: 'white', fontWeight: 600}}>{row.col2}</TableCell>
-              <TableCell sx={{color: 'white', fontWeight: 600}}>{row.col3}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+        ))}
+      </TableBody>
+    </Table>
+
 
   );
 }

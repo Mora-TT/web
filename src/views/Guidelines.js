@@ -55,7 +55,7 @@ function Guidelines() {
       margin: '0 5vw',
     },
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 40,
     paddingBottom: 2
   }} >
       <Typography variant="h5" color={'white'} paddingBottom={3} paddingLeft={10} paddingTop={5} alignContent={'center'} gutterBottom>
