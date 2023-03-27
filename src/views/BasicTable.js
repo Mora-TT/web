@@ -20,17 +20,17 @@ export default function BasicTable() {
     <Table style={{marginLeft: '2vw', marginRight: '2vw'}}>
       <TableHead>
         <TableRow>
-          <TableCell><b>CHAMPION CATEGORY</b></TableCell>
-          <TableCell><b>CANNOT PARTICIPATE</b></TableCell>
-          <TableCell><b>ELIGIBLE TO PARTICIPATE</b></TableCell>
+          <TableCell style={{fontSize: '0.8em', color: 'white'}}><b>CHAMPION CATEGORY</b></TableCell>
+          <TableCell style={{fontSize: '0.8em', color: 'white'}}><b>CANNOT PARTICIPATE</b></TableCell>
+          <TableCell style={{fontSize: '0.8em', color: 'white'}}><b>ELIGIBLE TO PARTICIPATE</b></TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {rows.map((row) => (
           <TableRow key={row.col1}>
-            <TableCell style={{fontSize: '0.8em'}}>{row.col1}</TableCell>
-            <TableCell style={{fontSize: '0.8em'}}>{row.col2}</TableCell>
-            <TableCell style={{fontSize: '0.8em'}}>{row.col3}</TableCell>
+            <TableCell style={{fontSize: '0.8em', color: 'white'}}>{row.col1}</TableCell>
+            <TableCell style={{fontSize: '0.8em', color: 'white'}}>{row.col2}</TableCell>
+            <TableCell style={{fontSize: '0.8em', color: 'white'}}>{row.col3}</TableCell>
           </TableRow>
         ))}
       </TableBody>
