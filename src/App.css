@@ -76,7 +76,7 @@ nav {
   
 }
 .footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #f8f8f8;
@@ -470,4 +470,5 @@ nav {
   .about-background-image-container {
     display: none;
   }
+  
 }
