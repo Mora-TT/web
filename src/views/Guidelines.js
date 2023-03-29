@@ -20,7 +20,7 @@ function Guidelines() {
     { description: 'All matches in the Novices events will be decided on the best of three (03) games.', key: 5 },
     { description: 'All disputes with regard to the interpretation of laws of Table Tennis shall be referred to Hon. Referee for the tournament Mr. Pradeep Nishantha and tournament in charge Mr. Chandana Perera.', key: 6 },
     { description: 'The draw and program will be displayed on the notice board at the venue, and it will serve as the only official information of the Championship.', key: 7 },
-    { description: 'Entries close on 21st April 2023 at 3.00p.m. and the draw will be held on _ _ May 2023 at 06.00pm, at University of Moratuwa.', key: 8 },
+    { description: 'Entries close on 21st April 2023 at 3.00p.m. and the draw will be held on 1st of May 2023 at 06.00pm, at University of Moratuwa.', key: 8 },
     { description: 'ENTRY FEES: Rs. 500/= for the Intermediate & Novices events & Rs.400/= for Age Group event/s. Rs. 100/= will be charge as competition fees from each player. ', key: 9 },
     //{description: <>Entries without the entry fee/s will not be included in the draw. Entries may be forwarded to reach by 03.00p.m. on 10th April 2023 to Mr. Supuna Warusawithana ,C/o Department of Physical Education,University of Moratuwa. Or by email as a PDF document to {gmail}/ {uomMail}</>, key: 10},
     { description: 'Competitors should report to the tournament office 10 minutes before the scheduled time for each Match.', key: 11 },
